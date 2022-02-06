@@ -1,0 +1,87 @@
+/* ------------------------------------------------
+  Project:   Labortech - Laboratory & Science Research HTML5 Template
+  Author:    ThemeHt
+
+  NOTE: This is Color customizer stylesheet of template.
+------------------------------------------------ */
+
+/* ------------------------
+    General
+------------------------*/
+::-moz-selection { background: #2363d5; color: #fff; text-shadow: none; }
+::-moz-selection { background: #2363d5; color: #fff; text-shadow: none; }
+::selection { background: #2363d5; color: #fff; text-shadow: none; }
+
+/* ------------------------
+    Background Color
+------------------------*/
+.theme-bg,
+.btn.btn-theme,
+.btn.btn-outline:hover,
+.btn.btn-dark:hover,
+.scroll-top a,
+.clear-loader,
+.nav-item.dropdown .dropdown-menu a:before,
+[data-cart-items]::before,
+.pagination > li.active .page-link, .page-link:hover, .page-link:focus,
+[data-overlay].theme-overlay:before,
+.service-item.style-1 .link-btn, .service-item.style-2 .link-btn,
+.accordion .accordion-item .accordion-button[aria-expanded="true"],
+.accordion .accordion-item .accordion-button::after,
+.cases-item .popup-img:hover,
+.ht-progress-bar .progress .progress-bar,
+.team-social-icon li a:hover,
+.social-icons li:hover a,
+.widget-tags a:hover,
+.post-card .link-btn,
+.video-btn .play-btn::after,
+.product-link button:hover,
+.form-check-input:checked,
+.tab .nav-tabs .nav-link.active, .tab .nav-tabs .nav-link:hover, .tab .nav-tabs.active > a:focus, .tab .nav-tabs > a:hover,
+.owl-carousel .owl-dots .owl-dot:hover span, .owl-carousel .owl-dots .owl-dot.active span,
+.owl-carousel .owl-nav button.owl-prev:hover, .owl-carousel .owl-nav button.owl-next:hover, .banner-slider.owl-carousel .owl-nav button.owl-prev:hover, .banner-slider.owl-carousel .owl-nav button.owl-next:hover
+{ background-color: #2363d5;}
+
+
+/* ------------------------
+    Color
+------------------------*/
+a, button, input, 
+.btn-link:hover,
+a:focus, a:hover,
+.text-theme,
+.navbar-nav .nav-link:hover, .navbar-nav .nav-item .nav-link.active,
+.nav-item.dropdown .dropdown-menu a:hover,
+.breadcrumb-item.active, .breadcrumb-item a:hover,
+.breadcrumb-item + .breadcrumb-item::before,
+.scroll-top a:hover, .scroll-top a:focus,
+.topbar-link a:hover,
+.featured-item .featured-icon,
+.team-member .team-description h5 a:hover,
+.cases-item h4 a:hover,
+.media-icon li i,
+.media-icon li a:hover,
+.contact-media a:hover,
+.footer-list li a:hover,
+.video-btn .play-btn i,
+.product-title a:hover,
+.view-filter a.active,
+.sidebar-links li.active a, .sidebar-links li a:hover,
+.product-price,
+.countdown > li span
+{color: #2363d5;}
+
+
+.sidebar-links li.active a, .sidebar-links li a:hover
+{border-left-color: #2363d5;}
+
+.pagination > li.active .page-link, .page-link:hover, .page-link:focus
+{border-color: #2363d5;}
+
+
+
+@media (max-width: 992px){
+.navbar-nav .nav-link:hover, .navbar-nav .nav-item .nav-link.active, .navbar-nav .nav-item .nav-link.show{background-color: #2363d5}
+.navbar-nav .nav-link:hover, .navbar-nav .nav-item .nav-link.active,
+.navbar-nav .nav-item .nav-link.show{color: #ffffff}
+}

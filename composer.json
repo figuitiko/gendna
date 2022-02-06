@@ -1,0 +1,17 @@
+{
+    "name": "frankfreeman/gendna",
+    "type": "project",
+    "license": "GPL",
+    "autoload": {
+        "psr-4": {
+            "Gendna\\": "inc/"
+        }
+    },
+    "authors": [
+        {
+            "name": "frank Freeman",
+            "email": "frankfigao@gmail.com"
+        }
+    ],
+    "require": {}
+}
