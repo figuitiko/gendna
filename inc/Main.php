@@ -46,6 +46,6 @@ class Main{
         define( 'GN_THEME_RS_PLUGIN', GN_THEME_URL.'/assets/rs-plugin');      
     }
     private function register(){
-        $scripts = new Scripts()
+        $scripts = new Scripts();
     }
 }
