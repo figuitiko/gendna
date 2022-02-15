@@ -112,176 +112,104 @@ class Scripts
             'ver' => THEME_VERSION
         ];
         $styles['bootstrap'] = [
-            'src' => $this->bootstrapPath . '/css/bootstrap.min.css',
+            'src' => $this->cssPath . '/bootstrap.min.css',
             'deps' => array(),
             'ver' => THEME_VERSION
         ];
-        $styles['style-theme'] = [
+        $styles['livvic'] = [
+            'src' => 'https://fonts.googleapis.com/css2?family=Livvic:ital,wght@0,300;0,400;0,500;0,600;0,700;0,900;1,300;1,400;1,500;1,600;1,700;1,900&display=swap',
+            'deps' => array(),
+            'ver' => THEME_VERSION
+        ];
+        $styles['Barlow'] = [
+            'src' => 'https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap',
+            'deps' => array(),
+            'ver' => THEME_VERSION
+        ];
+        $styles['animate'] = [
+            'src' => $this->cssPath . '/animate.css',
+            'deps' => array(),
+            'ver' => THEME_VERSION
+        ];
+        
+        $styles['line-awesome'] = [
+            'src' => $this->cssPath . '/line-awesome.min.css',
+            'deps' => array(),
+            'ver' => THEME_VERSION
+        ];
+        $styles['magnific-popup'] = [
+            'src' => $this->cssPath . '/magnific-popup.css',
+            'deps' => array(),
+            'ver' => THEME_VERSION
+        ];
+        $styles['owl-carousel'] = [
+            'src' => $this->cssPath . '/owl.carousel.css"',
+            'deps' => array(),
+            'ver' => THEME_VERSION
+        ];
+        $styles['lightslider'] = [
+            'src' => $this->cssPath . '/lightslider.min.css',
+            'deps' => array(),
+            'ver' => THEME_VERSION
+        ];
+        $styles['base'] = [
+            'src' => $this->cssPath . '/base.css',
+            'deps' => array(),
+            'ver' => THEME_VERSION
+        ];
+        $styles['shortcodes'] = [
+            'src' => $this->cssPath . '/shortcodes.css',
+            'deps' => array(),
+            'ver' => THEME_VERSION
+        ];
+        $styles['shortcodes'] = [
+            'src' => $this->cssPath . '/shortcodes.css',
+            'deps' => array(),
+            'ver' => THEME_VERSION
+        ];
+        $styles['spacing'] = [
+            'src' => $this->cssPath . '/spacing.css',
+            'deps' => array(),
+            'ver' => THEME_VERSION
+        ];
+        $styles['style-custom'] = [
             'src' => $this->cssPath . '/style.css',
             'deps' => array(),
             'ver' => THEME_VERSION
         ];
-        $styles['flexslider'] = [
-            'src' => $this->cssPath . '/flexslider.css',
-            'deps' => array(),
-            'ver' => THEME_VERSION
-        ];
-        $styles['ionicons'] = [
-            'src' => $this->iconsDir . '/css/ionicons.min.css',
-            'deps' => array(),
-            'ver' => THEME_VERSION
-        ];
-        $styles['simple-line'] = [
-            'src' => $this->iconsDir . '/css/simple-line-icons.css',
-            'deps' => array(),
-            'ver' => THEME_VERSION
-        ];
-        $styles['rs-plugin'] = [
-            'src' => $this->rsPlugin . '/css/settings.css',
-            'deps' => array(),
-            'ver' => THEME_VERSION
-        ];
-        $styles['pretty-photo'] = [
-            'src' => $this->cssPath . '/prettyPhoto.css',
-            'deps' => array(),
-            'ver' => THEME_VERSION
-        ];
-
 
         return $styles;
     }
 
     public function addFrontEndScripts()
     {
-        //General Scripts
-        $scripts['ie_html5shiv'] = array(
-            'src' => 'https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js',
-            'ver' => '3.7.3',
-            'in_footer' => false,
-            'data' => array(
-                'key' => 'conditional',
-                'value' => 'lt IE 9',
-            )
-        );
-        $scripts['respond'] = array(
-            'src' => 'https://oss.maxcdn.com/respond/1.4.2/respond.min.js',
-            'ver' => '1.4.2',
-            'in_footer' => false,
-            'data' => array(
-                'key' => 'conditional',
-                'value' => 'lt IE 9',
-            )
-        );
-        //jquery
+        
 
         wp_deregister_script('jquery');
 
-        $scripts['jquery'] = array(
-            'src' => $this->jsPath . '/jquery.min.js',
-            'ver' => '1.11.2',
+        $scripts['theme'] = array(
+            'src' => $this->jsPath . '/theme.js',
+            'ver' => '3.6.0',
             'in_footer' => true,
 
         );
-        $scripts['moderniz'] = array(
-            'src' => $this->jsPath . '/moderniz.min.js',
-            'ver' => '',
+        $scripts['theme-plugin'] = array(
+            'src' => $this->jsPath . '/theme-plugin.js',
+            'ver' => THEME_VERSION,
             'in_footer' => true,
             'deps' => array(
-                'jquery',
+                'theme',
             )
-        );
-        $scripts['easing'] = array(
-            'src' => $this->jsPath . '/jquery.easing.1.3.js',
-            'ver' => '',
-            'in_footer' => true,
-            'deps' => array(
-                'jquery',
-            )
-        );
 
-        //bootstrap
-
-        $scripts['bootstrap-js'] = array(
-            'src' => $this->bootstrapPath . '/js/bootstrap.min.js',
-            'ver' => '',
-            'in_footer' => true,
-            'deps' => array(
-                'jquery',
-                'ie_html5shiv',
-                'respond'
-
-            )
         );
-        $scripts['flexslider-js'] = array(
-            'src' => $this->jsPath . '/jquery.flexslider-min.js',
-            'ver' => '',
+        $scripts['theme-script'] = array(
+            'src' => $this->jsPath . '/theme-script.js',
+            'ver' => THEME_VERSION,
             'in_footer' => true,
             'deps' => array(
-                'jquery',
+                'theme',
             )
-        );
 
-        $scripts['parallax-js'] = array(
-            'src' => $this->jsPath . '/parallax.min.js',
-            'ver' => '',
-            'in_footer' => true,
-            'deps' => array(
-                'jquery',
-            )
-        );
-
-        $scripts['prettyPhoto-js'] = array(
-            'src' => $this->jsPath . '/jquery.prettyPhoto.js',
-            'ver' => '',
-            'in_footer' => true,
-            'deps' => array(
-                'jquery',
-            )
-        );
-
-        $scripts['jqBootstrapValidation-js'] = array(
-            'src' => $this->jsPath . '/jqBootstrapValidation.js',
-            'ver' => '',
-            'in_footer' => true,
-            'deps' => array(
-                'jquery',
-            )
-        );
-
-        //revolution slider scripts
-        $scripts['themepunch-tool-js'] = array(
-            'src' => $this->rsPlugin . '/js/jquery.themepunch.tools.min.js',
-            'ver' => '',
-            'in_footer' => true,
-            'deps' => array(
-                'jquery',
-            )
-        );
-
-        $scripts['themepunch-revolution-js'] = array(
-            'src' => $this->rsPlugin . '/js/jquery.themepunch.revolution.min.js',
-            'ver' => '',
-            'in_footer' => true,
-            'deps' => array(
-                'jquery',
-            )
-        );
-
-        $scripts['template'] = array(
-            'src' => $this->jsPath . '/template.js',
-            'ver' => '',
-            'in_footer' => true,
-            'deps' => array(
-                'jquery',
-            )
-        );
-        $scripts['form-js'] = array(
-            'src' => $this->jsPath . '/form-send.js',
-            'ver' => '',
-            'in_footer' => true,
-            'deps' => array(
-                'jquery',
-            )
         );
 
 

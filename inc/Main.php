@@ -3,6 +3,7 @@
 
 namespace Gendna;
 
+use Gendna\Scripts;
 
 
 
